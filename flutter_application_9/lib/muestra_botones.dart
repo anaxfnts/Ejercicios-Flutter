@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_9/adivina_numero_juego.dart';
 import 'package:flutter_application_9/formulario.dart';
 import 'package:flutter_application_9/home_page.dart';
+import 'package:flutter_application_9/mejora_aspecto.dart';
 
 class MuestraBotones extends StatelessWidget {
   final List<Map<String, dynamic>> buttons = [
@@ -51,6 +52,17 @@ class MuestraBotones extends StatelessWidget {
                 );
               },
             ),
+            ListTile(
+                title: const Text('Mejora Aspecto'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MejoraAspecto(),
+                    ),
+                  );
+                },
+              ),
             ListTile(
               title: const Text('Adivina el Número'),
               onTap: () {
